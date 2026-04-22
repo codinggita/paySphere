@@ -140,6 +140,12 @@ Net Salary = Base Salary
 
 ---
 
+## 🎨 UI/UX Philosophy
+
+Figma Prototype : [Figma](https://www.figma.com/proto/v7oAom74sFxLaaf0JO8UvI/Untitled?node-id=501-1971&viewport=16164%2C15242%2C0.12&t=n1yfHauC6Rlr6HhY-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=501%3A1971&page-id=11%3A29)
+
+---
+
 <p align="center">
   <strong>PaySphere</strong> — Payroll in seconds, not hours. ⚡
 </p>
