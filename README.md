@@ -18,11 +18,47 @@
 
 ---
 
+## 🎨 UI/UX Philosophy
+
+Figma Prototype : [Figma](https://www.figma.com/proto/v7oAom74sFxLaaf0JO8UvI/Untitled?node-id=501-1971&viewport=16164%2C15242%2C0.12&t=n1yfHauC6Rlr6HhY-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=501%3A1971&page-id=11%3A29)
+
+---
+
 ## ✨ What is PaySphere?
 
 PaySphere follows a **"Digital Ledger"** design philosophy — minimal UI, clear structure, fast interactions, zero unnecessary complexity. Inspired by the simplicity of **Notion** and the polish of **Stripe**.
 
 > **Built for small teams** — not enterprise HR departments. Add your employees, log updates through a chat-style interface, and run payroll in one click.
+
+---
+
+## ❗ Problem Statement
+
+Small businesses employing fewer than 10 workers spend hours every month
+manually calculating salaries --- factoring in:
+
+-   Paid leave
+-   Unpaid absences
+-   Overtime hours
+-   Festival bonuses
+
+Most payroll software is built for **large enterprises**, making them:
+- Too complex
+- Too expensive
+- Not optimized for tiny teams
+
+👉 Result: **Wasted time, calculation errors, and frustration**
+
+---
+
+## 💡 Solution
+
+PaySphere simplifies payroll into a **3-step workflow**:
+
+1.  👥 Add employees
+2.  💬 Log updates via
+3.  ⚡ Run payroll instantly
+
 
 ---
 
@@ -137,12 +173,6 @@ Net Salary = Base Salary
 | Working days/month | 26 |
 | Hours/day | 8 |
 | Overtime multiplier | 1.5× |
-
----
-
-## 🎨 UI/UX Philosophy
-
-Figma Prototype : [Figma](https://www.figma.com/proto/v7oAom74sFxLaaf0JO8UvI/Untitled?node-id=501-1971&viewport=16164%2C15242%2C0.12&t=n1yfHauC6Rlr6HhY-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=501%3A1971&page-id=11%3A29)
 
 ---
 
