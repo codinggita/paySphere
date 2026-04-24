@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Dashboard from "../components/Dashboard"
+import Steps from "../components/Steps"
 
 export default function Landing() {
   return (
@@ -8,6 +9,7 @@ export default function Landing() {
         <Navbar />
         <Hero />
         <Dashboard />
+        <Steps />
     </div>
   )
 }
