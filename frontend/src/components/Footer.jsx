@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <>
@@ -17,9 +19,9 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <button className="w-full sm:w-auto bg-white text-blue-600 text-base sm:text-lg font-bold px-6 sm:px-10 py-3 sm:py-4 rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95">
+              <Link to="/auth?mode=signup" className="w-full sm:w-auto bg-white text-blue-600 text-base sm:text-lg font-bold px-6 sm:px-10 py-3 sm:py-4 rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95">
                 Start Your Free Trial
-              </button>
+              </Link>
             </div>
 
             <p className="mt-6 sm:mt-8 text-blue-200 text-xs sm:text-sm font-medium">
