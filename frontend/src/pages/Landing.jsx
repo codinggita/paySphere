@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Dashboard from "../components/Dashboard"
 import Steps from "../components/Steps"
+import FAQS from "../components/FAQS"
 
 export default function Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Landing() {
         <Hero />
         <Dashboard />
         <Steps />
+        <FAQS />
     </div>
   )
 }
