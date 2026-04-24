@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="pt-28 sm:pt-36 md:pt-44 pb-16 sm:pb-20 px-4 sm:px-6">
@@ -23,9 +25,12 @@ export default function Hero() {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
-          <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-base sm:text-lg font-bold px-6 sm:px-10 py-3 sm:py-4 rounded-xl shadow-xl shadow-blue-200 transition-all hover:translate-y-0.5 active:scale-95">
-            Start Your Free Trial
-          </button>
+            <Link 
+              to="/auth?mode=signup"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl shadow-blue-200 transition-all hover:scale-105 active:scale-95"
+            >
+              Start your free trial
+            </Link>
         </div>
 
       </div>
