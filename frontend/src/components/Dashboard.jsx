@@ -12,7 +12,7 @@ export default function Dashboard() {
                     />
 
                     {/* Overlay Card - Total Net Payout */}
-                    <div className="absolute -bottom-10 -right-4 md:-right-12 bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-70 hidden sm:block animate-in slide-in-from-right-10 duration-1000 delay-500">
+                    <div className="absolute -bottom-10 -right-4 md:-right-12 bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-70 hidden sm:block">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
                                 <span className="text-xl">₹</span>
