@@ -18,7 +18,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
-            <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-xl shadow-blue-200 transition-all hover:translate-y-[-2px] active:scale-95">
+            <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-xl shadow-blue-200 transition-all hover:translate-y-0.5 active:scale-95">
               Start Your Free Trial
             </button>
           </div>
