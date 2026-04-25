@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const GoogleIcon = () => (
   <svg width="20" height="20" viewBox="0 0 48 48">
@@ -99,9 +100,9 @@ export default function PaySphereLogin() {
                   className="w-full mb-4 px-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:border focus:border-blue-500 outline-none"
                 />
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5">
+                <Link to="/dashboard" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5 text-center">
                   Login
-                </button>
+                </Link>
 
                 <div className="flex items-center gap-3 mb-5">
                   <div className="flex-1 h-px bg-gray-200" />
@@ -140,9 +141,9 @@ export default function PaySphereLogin() {
                   className="w-full mb-4 px-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:border focus:border-blue-500 outline-none"
                 />
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5">
+                <Link to="/dashboard" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5 text-center">
                   Create Account
-                </button>
+                </Link>
 
                 <div className="flex items-center gap-3 mb-5">
                   <div className="flex-1 h-px bg-gray-200" />
