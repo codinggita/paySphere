@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // --- Dashboard Component ---
-const DashboardOverview = ({ search, setSearch, filtered, getInitials }) => (
+const DashboardOverview = ({ search, setSearch, filtered, getInitials, onAddUpdate }) => (
   <main className="p-4 sm:p-8">
     {/* Title */}
     <div className="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
@@ -95,7 +96,10 @@ const DashboardOverview = ({ search, setSearch, filtered, getInitials }) => (
             </div>
 
             {/* Button */}
-            <button className="border border-gray-200 rounded-lg py-2 text-blue-600 font-semibold hover:bg-indigo-50">
+            <button 
+              onClick={onAddUpdate}
+              className="border border-gray-200 rounded-lg py-2 text-blue-600 font-semibold hover:bg-indigo-50"
+            >
               + Add Update
             </button>
           </div>
@@ -229,6 +233,7 @@ const EmployeeManagement = () => {
 };
 
 export default function PaySphereDashboard() {
+  const navigate = useNavigate();
   const [activePage, setActivePage] = useState("Dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -347,6 +352,7 @@ export default function PaySphereDashboard() {
             setSearch={setSearch} 
             filtered={filtered} 
             getInitials={getInitials} 
+            onAddUpdate={() => navigate("/monthly-updates")}
           />
         ) : (
           <EmployeeManagement />
