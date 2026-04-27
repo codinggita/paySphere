@@ -2,7 +2,7 @@ import dashboardMockup from "../assets/dashboard-mockup.png";
 
 export default function Dashboard() {
   return (
-    <section className="px-4 sm:px-6 pb-16 sm:pb-24 overflow-hidden">
+    <section id="features" className="px-4 sm:px-6 pb-16 sm:pb-24 overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
 
         {/* Dashboard Image */}

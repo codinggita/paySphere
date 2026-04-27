@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       {/* CTA Section */}
-      <section className="px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+      <section id="pricing" className="px-4 sm:px-6 py-16 sm:py-20 md:py-24">
         <div className="max-w-6xl mx-auto bg-blue-600 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-blue-200">
           
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1),transparent)]"></div>
@@ -32,83 +32,74 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="pt-16 sm:pt-20 md:pt-24 pb-10 sm:pb-12 px-4 sm:px-6 border-t border-gray-100">
+      <footer className="pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 border-t border-gray-100 bg-gray-50/30">
         <div className="max-w-7xl mx-auto">
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 sm:gap-12 mb-12 sm:mb-16 md:mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 sm:gap-16 mb-16 sm:mb-20">
 
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="text-lg sm:text-xl font-black tracking-tight flex items-center gap-2 mb-4 sm:mb-6">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm sm:text-lg">
+            {/* Brand Section */}
+            <div className="md:col-span-5 lg:col-span-4">
+              <div className="text-xl sm:text-2xl font-black tracking-tight flex items-center gap-2 mb-6 sm:mb-8">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white text-base sm:text-xl shadow-lg shadow-blue-200">
                   P
                 </div>
                 PaySphere
               </div>
 
-              <p className="text-gray-500 text-sm sm:text-[15px] leading-relaxed max-w-xs mb-6 sm:mb-8">
+              <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-sm mb-8 sm:mb-10">
                 Building the financial infrastructure for modern Indian small businesses.
-                Simplify payroll, stay compliant.
+                Simplify payroll, stay compliant, and empower your team.
               </p>
             </div>
 
-            {/* Columns */}
-            {[
-              {
-                title: "Product",
-                links: ["Features", "Integrations", "Pricing", "Changelog"]
-              },
-              {
-                title: "Company",
-                links: ["About Us", "Careers", "Privacy", "Terms"]
-              },
-              {
-                title: "Support",
-                links: ["Help Center", "Contact", "Status", "Security"]
-              }
-            ].map((col, i) => (
-              <div key={i}>
-                <h4 className="font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-6">
-                  {col.title}
-                </h4>
+            {/* Links Section */}
+            <div className="md:col-span-3 lg:col-span-2">
+              <h4 className="font-bold text-sm uppercase tracking-widest text-gray-900 mb-6 sm:mb-8">
+                Quick Links
+              </h4>
+              <ul className="space-y-4 text-[15px] sm:text-base text-gray-500">
+                {[
+                  { name: "Features", href: "#features" },
+                  { name: "Process", href: "#process" },
+                  { name: "Pricing", href: "#pricing" },
+                  { name: "FAQ", href: "#faq" }
+                ].map((link, j) => (
+                  <li key={j}>
+                    <a href={link.href} className="hover:text-blue-600 transition-colors">
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-[15px] text-gray-500">
-                  {col.links.map((link, j) => (
-                    <li
-                      key={j}
-                      className="hover:text-blue-600 cursor-pointer transition-colors"
-                    >
-                      {link}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {/* Newsletter Section */}
+            <div className="md:col-span-4 lg:col-span-4 lg:col-start-9">
+              <h4 className="font-bold text-sm uppercase tracking-widest text-gray-900 mb-6 sm:mb-8">
+                Stay in the loop
+              </h4>
+              <p className="text-gray-500 text-[15px] sm:text-base mb-6 leading-relaxed">
+                Join 2,000+ business owners receiving our weekly payroll & compliance tips.
+              </p>
+              <form className="flex flex-col sm:flex-row gap-3">
+                <button
+                  type="button"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-blue-100 transition-all active:scale-95 text-sm"
+                >
+                  Join
+                </button>
+              </form>
+            </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="flex flex-col md:flex-row justify-between items-center pt-6 sm:pt-8 md:pt-10 border-t border-gray-100 gap-4 sm:gap-6 text-center md:text-left">
-            
-            <p className="text-xs sm:text-sm text-gray-400">
-              © 2026 PaySphere Inc. All rights reserved.
-            </p>
-
-            <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                System Operational
-              </span>
-
-              <span className="cursor-pointer hover:text-gray-900 transition-colors">
-                Privacy Policy
-              </span>
-
-              <span className="cursor-pointer hover:text-gray-900 transition-colors">
-                Terms of Service
-              </span>
+          <div className="flex flex-col md:flex-row justify-center items-center pt-8 sm:pt-10 md:pt-12 border-t border-gray-100 gap-6 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-6">
+              <p className="text-[13px] sm:text-sm text-gray-400 font-medium">
+                © 2026 PaySphere Inc.
+              </p>
             </div>
-
           </div>
         </div>
       </footer>

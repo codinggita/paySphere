@@ -1,6 +1,6 @@
 export default function Steps() {
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-gray-50/50 border-y border-gray-100 px-4 sm:px-6">
+    <section id="process" className="py-16 sm:py-20 md:py-24 bg-gray-50/50 border-y border-gray-100 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto text-center">
 
         {/* Heading */}
