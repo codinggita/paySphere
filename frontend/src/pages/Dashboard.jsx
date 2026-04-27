@@ -2,53 +2,53 @@ import { useState } from "react";
 
 // --- Dashboard Component ---
 const DashboardOverview = ({ search, setSearch, filtered, getInitials }) => (
-  <main className="p-8">
+  <main className="p-4 sm:p-8">
     {/* Title */}
-    <div className="flex justify-between items-start mb-8">
+    <div className="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
       <div>
         <p className="text-sm text-gray-400">Monthly Overview</p>
-        <h1 className="text-4xl font-serif text-gray-900">April 2026</h1>
+        <h1 className="text-3xl sm:text-4xl font-serif text-gray-900">April 2026</h1>
       </div>
 
-      <div className="flex gap-3">
-        <button className="px-5 py-2.5 border border-gray-200 rounded-lg text-sm font-semibold hover:shadow">
+      <div className="flex gap-3 w-full sm:w-auto">
+        <button className="flex-1 sm:flex-none px-5 py-2.5 border border-gray-200 rounded-lg text-sm font-semibold hover:shadow">
           Reports
         </button>
 
-        <button className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-bold">
+        <button className="flex-1 sm:flex-none px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-bold">
           Run Payroll
         </button>
       </div>
     </div>
 
     {/* Stats */}
-    <div className="flex gap-4 mb-10">
+    <div className="flex flex-col sm:flex-row gap-4 mb-10">
       <div className="flex-1 bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
         <p className="text-xs uppercase text-gray-400 font-bold mb-2">
           Total Monthly Payout
         </p>
-        <h2 className="text-3xl font-bold">₹12,45,000</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold">₹12,45,000</h2>
         <p className="text-green-500 text-sm mt-2">+4.2% vs last month</p>
       </div>
 
-      <div className="w-64 bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+      <div className="w-full sm:w-64 bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
         <p className="text-xs uppercase text-gray-400 font-bold mb-2">
           Employees
         </p>
-        <h2 className="text-4xl font-bold">24</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold">24</h2>
         <p className="text-gray-400 text-sm">Active this month</p>
       </div>
     </div>
 
     {/* Search */}
-    <div className="flex justify-between items-center mb-6">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
       <h2 className="text-lg font-bold">Employee Directory</h2>
 
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search employees..."
-        className="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:border-blue-500 outline-none"
+        className="w-full sm:w-auto px-4 py-2 border border-gray-200 rounded-lg text-sm focus:border-blue-500 outline-none"
       />
     </div>
 
@@ -103,7 +103,7 @@ const DashboardOverview = ({ search, setSearch, filtered, getInitials }) => (
       })}
 
       {/* Add Card */}
-      <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center min-h-[180px] hover:border-blue-500 hover:bg-indigo-50 cursor-pointer">
+      <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center min-h-45 hover:border-blue-500 hover:bg-indigo-50 cursor-pointer">
         <p className="text-gray-400 font-semibold">+ Add Employee</p>
       </div>
     </div>
@@ -126,7 +126,7 @@ const EmployeeManagement = () => {
     name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
 
   return (
-    <main className="p-8">
+    <main className="p-4 sm:p-8">
       {/* Summary */}
       <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
         <div>
@@ -136,7 +136,7 @@ const EmployeeManagement = () => {
 
           <p className="text-sm text-gray-400 mb-1">April 2026 Final Summary</p>
 
-          <h1 className="text-4xl font-serif text-gray-900 mb-2">
+          <h1 className="text-3xl sm:text-4xl font-serif text-gray-900 mb-2">
             ₹{totalNet.toLocaleString("en-IN")}
           </h1>
 
@@ -145,12 +145,12 @@ const EmployeeManagement = () => {
           </p>
         </div>
 
-        <div className="flex gap-3">
-          <button className="px-5 py-3 border border-gray-200 rounded-xl font-semibold text-gray-700 hover:shadow">
+        <div className="flex gap-3 w-full sm:w-auto">
+          <button className="flex-1 sm:flex-none px-5 py-3 border border-gray-200 rounded-xl font-semibold text-gray-700 hover:shadow">
             Edit Updates
           </button>
 
-          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold">
+          <button className="flex-1 sm:flex-none px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold">
             Finish & Pay
           </button>
         </div>
@@ -218,7 +218,7 @@ const EmployeeManagement = () => {
         })}
 
         {/* View More */}
-        <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center min-h-[200px] hover:border-blue-500 hover:bg-indigo-50 cursor-pointer">
+        <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center min-h-50 hover:border-blue-500 hover:bg-indigo-50 cursor-pointer">
           <p className="text-gray-400 font-semibold">
             + View more employees
           </p>
@@ -230,6 +230,7 @@ const EmployeeManagement = () => {
 
 export default function PaySphereDashboard() {
   const [activePage, setActivePage] = useState("Dashboard");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [search, setSearch] = useState("");
 
   const employees = [
@@ -256,23 +257,42 @@ export default function PaySphereDashboard() {
   return (
     <div className="min-h-screen bg-gray-100 flex font-sans">
 
+      {/* Sidebar Backdrop */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="w-56 bg-white border-r border-gray-200 fixed inset-y-0 left-0 flex flex-col">
-        <div className="p-5 border-b border-gray-200 flex items-center gap-3">
-          <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-            ₹
+      <aside className={`w-56 bg-white border-r border-gray-200 fixed inset-y-0 left-0 flex flex-col z-50 transition-transform duration-300 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
+        <div className="p-5 border-b border-gray-200 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+              ₹
+            </div>
+            <div>
+              <p className="font-bold text-sm text-gray-900">Acme Corp</p>
+              <p className="text-xs text-gray-400">Payroll ID: 8821</p>
+            </div>
           </div>
-          <div>
-            <p className="font-bold text-sm text-gray-900">Acme Corp</p>
-            <p className="text-xs text-gray-400">Payroll ID: 8821</p>
-          </div>
+          <button 
+            className="md:hidden p-2 text-gray-400 hover:text-gray-600"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            ✕
+          </button>
         </div>
 
         <nav className="flex-1 p-3 space-y-1">
           {["Dashboard", "Employees"].map((item) => (
             <button
               key={item}
-              onClick={() => setActivePage(item)}
+              onClick={() => {
+                setActivePage(item);
+                setIsSidebarOpen(false);
+              }}
               className={`w-full flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm transition ${
                 activePage === item
                   ? "bg-indigo-50 text-blue-600 font-semibold"
@@ -296,13 +316,19 @@ export default function PaySphereDashboard() {
       </aside>
 
       {/* Main */}
-      <div className="ml-56 flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col md:ml-56 transition-all duration-300">
 
         {/* Topbar */}
-        <header className="h-16 bg-white border-b border-gray-200 px-8 flex items-center justify-between sticky top-0 z-10">
-          <div className="flex items-center gap-6">
-            <span className="font-bold text-blue-900">Ledger Payroll</span>
-            <button className="text-blue-600 font-semibold border-b-2 border-blue-600 pb-0.5">
+        <header className="h-16 bg-white border-b border-gray-200 px-4 sm:px-8 flex items-center justify-between sticky top-0 z-30">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <button 
+              className="md:hidden p-2 -ml-2 text-gray-500 hover:text-gray-700"
+              onClick={() => setIsSidebarOpen(true)}
+            >
+              ☰
+            </button>
+            <span className="font-bold text-blue-900 truncate">Ledger Payroll</span>
+            <button className="hidden sm:block text-blue-600 font-semibold border-b-2 border-blue-600 pb-0.5 whitespace-nowrap">
               April 2026
             </button>
           </div>
@@ -329,4 +355,4 @@ export default function PaySphereDashboard() {
       </div>
     </div>
   );
-}
+}
