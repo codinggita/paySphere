@@ -19,10 +19,10 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-medium text-gray-600">
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">Features</li>
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">Why Ledger</li>
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">Pricing</li>
-            <li className="hover:text-blue-600 cursor-pointer transition-colors">FAQ</li>
+            <a href="#features" className="hover:text-blue-600 cursor-pointer transition-colors">Features</a>
+            <a href="#process" className="hover:text-blue-600 cursor-pointer transition-colors">Process</a>
+            <a href="#pricing" className="hover:text-blue-600 cursor-pointer transition-colors">Pricing</a>
+            <a href="#faq" className="hover:text-blue-600 cursor-pointer transition-colors">FAQ</a>
           </ul>
         </div>
 
@@ -57,10 +57,10 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden px-6 pb-6 bg-white border-t border-gray-100">
           <ul className="flex flex-col gap-4 text-[15px] font-medium text-gray-700 mt-4">
-            <li>Features</li>
-            <li>Why Ledger</li>
-            <li>Pricing</li>
-            <li>FAQ</li>
+            <a href="#features" onClick={() => setIsOpen(false)}>Features</a>
+            <a href="#process" onClick={() => setIsOpen(false)}>Process</a>
+            <a href="#pricing" onClick={() => setIsOpen(false)}>Pricing</a>
+            <a href="#faq" onClick={() => setIsOpen(false)}>FAQ</a>
           </ul>
 
           <div className="flex items-center gap-4">
