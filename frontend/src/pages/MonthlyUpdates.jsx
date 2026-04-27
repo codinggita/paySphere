@@ -174,6 +174,15 @@ export default function MonthlyUpdates() {
   const [input, setInput]             = useState("");
   const [activity, setActivity]       = useState(INIT_ACTIVITY);
   const [nextId, setNextId]           = useState(10);
+  const companyName = localStorage.getItem("companyName") || "Acme Corp";
+
+  const getCompInitials = (name) =>
+    name
+      .split(" ")
+      .map((w) => w[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
 
   const handleSubmit = () => {
     if (!input.trim()) return;
@@ -250,7 +259,7 @@ export default function MonthlyUpdates() {
                 <PayrollIcon />
               </div>
               <div>
-                <div style={{ fontWeight:800, fontSize:14.5, color:"#111827" }}>Acme Corp</div>
+                <div style={{ fontWeight:800, fontSize:14.5, color:"#111827" }}>{companyName}</div>
                 <div style={{ fontSize:11, color:"#9CA3AF", marginTop:1, textTransform:"uppercase", letterSpacing:"0.05em" }}>Payroll ID: 8821</div>
               </div>
             </div>
@@ -339,7 +348,9 @@ export default function MonthlyUpdates() {
           <div style={{ display:"flex", alignItems:"center", gap:14 }}>
             <button style={{ background:"none", border:"none", cursor:"pointer", display:"flex" }}><BellIcon /></button>
             <button style={{ background:"none", border:"none", cursor:"pointer", display:"flex" }}><HelpCircleIcon /></button>
-            <div style={{ width:34, height:34, borderRadius:"50%", background:"#1E3A5F", display:"flex", alignItems:"center", justifyContent:"center", fontSize:12, fontWeight:700, color:"white", cursor:"pointer" }}>AC</div>
+            <div style={{ width:34, height:34, borderRadius:"50%", background:"#1E3A5F", display:"flex", alignItems:"center", justifyContent:"center", fontSize:12, fontWeight:700, color:"white", cursor:"pointer" }}>
+              {getCompInitials(companyName)}
+            </div>
           </div>
         </header>
 

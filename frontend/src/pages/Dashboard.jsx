@@ -237,6 +237,7 @@ export default function PaySphereDashboard() {
   const [activePage, setActivePage] = useState("Dashboard");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const companyName = localStorage.getItem("companyName") || "Acme Corp";
 
   const employees = [
     { id: 1, name: "Ravi Kumar", role: "Software Engineer", salary: "₹35,000", status: "Paid", color: "#6366F1" },
@@ -278,7 +279,7 @@ export default function PaySphereDashboard() {
               ₹
             </div>
             <div>
-              <p className="font-bold text-sm text-gray-900">Acme Corp</p>
+              <p className="font-bold text-sm text-gray-900">{companyName}</p>
               <p className="text-xs text-gray-400">Payroll ID: 8821</p>
             </div>
           </div>
@@ -340,7 +341,7 @@ export default function PaySphereDashboard() {
 
           <div className="flex items-center gap-4 text-gray-500">
             <div className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white text-sm font-bold">
-              AC
+              {getInitials(companyName)}
             </div>
           </div>
         </header>

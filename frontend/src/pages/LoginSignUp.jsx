@@ -11,6 +11,7 @@ const GoogleIcon = () => (
 export default function PaySphereLogin() {
   const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(searchParams.get("mode") === "signup" ? "signup" : "login");
+  const [companyName, setCompanyName] = useState("");
 
   useEffect(() => {
     const mode = searchParams.get("mode");
@@ -136,12 +137,28 @@ export default function PaySphereLogin() {
                 />
 
                 <input
+                  type="text"
+                  placeholder="Company Name"
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                  className="w-full mb-4 px-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:border focus:border-blue-500 outline-none"
+                />
+
+                <input
                   type="password"
                   placeholder="Password"
                   className="w-full mb-4 px-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:border focus:border-blue-500 outline-none"
                 />
 
-                <Link to="/dashboard" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5 text-center">
+                <Link 
+                  to="/dashboard" 
+                  onClick={() => {
+                    if (companyName) {
+                      localStorage.setItem("companyName", companyName);
+                    }
+                  }}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition mb-5 text-center"
+                >
                   Create Account
                 </Link>
 
