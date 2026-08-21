@@ -118,8 +118,14 @@ export const APP_ROUTES = [
     icon: 'userPlus',
   },
   {
-    path: '/archive',
-    component: lazy(() => import('../pages/Archive')),
+    path: '/org-chart',
+    component: lazy(() => import('../pages/OrgChartBuilder')),
+    label: 'Org chart',
+    group: 'people',
+    icon: 'people',
+  },
+  {
+    path: '/archive',    component: lazy(() => import('../pages/Archive')),
     label: 'Archive',
     group: 'people',
     icon: 'archive',
@@ -395,6 +401,10 @@ export const APP_ROUTES = [
   {
     path: '/enterprise/cybersecurity-soc',
     component: lazy(() => import('../pages/security/EnterpriseCybersecuritySOCPage')),
+  },
+  {
+    path: '/enterprise/fraud-intelligence',
+    component: lazy(() => import('../pages/fraud/EnterpriseFraudIntelligencePage')),
   },
   {
     path: '/enterprise/engagement-sentiment',
